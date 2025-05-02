@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Event Finder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Event Finder</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://www.instagram.com/eventfinder_?igsh=dWd1dmtjMDNmeGY3">Follow us</a></li>
+                <li class="menu-container">
+                
+            </ul>
+        </nav>
+    </header>
+    <div id="loading">
+    <div class="spinner"></div>
+    
+</div>
+<script>
+window.onload = function() {
+    setTimeout(() => {
+        document.getElementById("loading").style.opacity = "0";
+        setTimeout(() => {
+            document.getElementById("loading").style.display = "none";
+        }, 500); // Waits 0.5 seconds before removing
+    }, 500); // Shows loader for at least 1 second
+};
+</script>
+
+    <main>
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" required>
+
+    <label for="message">Message:</label>
+    <textarea id="message" rows="4" required></textarea>
+
+    <button type="submit">Submit</button>
+</form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Event Finder. All rights reserved.</p>
+    </footer>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    let formData = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
+        message: document.getElementById("message").value
+    };
+
+    fetch("https://script.google.com/macros/s/AKfycbwzySNkVKZOkW3c0lHw4P5QyKb5jdqDVmzVG56gI5fVgyp-gNqLLJT01wss9Po5WSM/exec", {
+        method: "POST",
+        body: JSON.stringify(formData),
+        headers: { "Content-Type": "application/json" }
+    })
+    .then(response => response.text())
+    .then(data => {
+        console.log("Server Response:", data);
+        alert("Message sent successfully!");
+        document.getElementById("contactForm").reset();
+    })
+    .catch(error => console.error("Error:", error));
+});
+</script>
+    
+</body>
+</html>
