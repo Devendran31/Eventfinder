@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Event Finder</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            background: url('') no-repeat center center/cover;
+            font-family: Arial, sans-serif;
+            background-color:rgb(136, 113, 75);
+            color: #333;
+        }
+        .hero1 {
+            padding: 1rem 1rem;
+            background-color:rgb(35, 33, 33);    
+            background-position: 1cm;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+        }
+        .about-section {
+            text-align: center;
+            padding: 2rem;
+            background:white;
+            border-radius: 10px;
+            margin: 2rem auto;
+            width: 85%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .about-section1 {
+            color: rgb(255, 94, 0);
+            text-align: center;
+            padding: 2rem;
+            background-color: rgba(0, 0, 0, 0.552);
+            border-radius: 10px;
+            margin: 2rem auto;
+            width: 85%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .developers {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .developer-card {
+            background-color:rgb(255, 255, 254);
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 200px;
+            transition: transform 0.3s;
+            border-color: burlywood;
+            border-style: groove;
+        }
+        .developer-card:hover {
+            transform: scale(1.033);
+            
+        }
+        .developer-card img {
+            border-color:burlywood;
+            border-style:groove;
+        width: 190px;
+        
+            height: 200px;
+            border-radius: 50%;
+            object-fit:cover;
+        }
+        
+     
+        .social-links a {
+            margin: 5px;
+            font-size: 20px;
+            color: #333;
+            transition: color 0.3s;
+        }
+        .social-links a i:hover {
+            transform: scale(.96);
+            color:orange;
+        }
+    </style>
+    <div id="loading">
+    <div class="spinner"></div>
+</div>
+<script>
+window.onload = function() {
+    setTimeout(() => {
+        document.getElementById("loading").style.opacity = "0";
+        setTimeout(() => {
+            document.getElementById("loading").style.display = "none";
+        }, 500); // Waits 0.5 seconds before removing
+    }, 1000); // Shows loader for at least 1 second
+};
+</script>
+</head>
+<body>
+    <header>
+        <h1>Event Finder</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://www.instagram.com/eventfinder_?igsh=dWd1dmtjMDNmeGY3">Follow us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero1">
+        About Event Finder
+    </section>
+    <section class="about-section">
+        <h2>What is Event Finder?</h2>
+        <p>Event Finder is a platform that brings you the latest updates on events happening in Coimbatore, from college festivals to concerts and tech meetups. Never miss out on the best experiences!</p>
+    </section>
+    <section class="about-section">
+        <h2>Our Vision & Mission</h2>
+        <p>Our mission is to create a seamless experience for event enthusiasts by connecting them with exciting events. We aim to make event discovery effortless and engaging.</p>
+    </section>
+    <section class="about-section1">
+        <h2>Meet The Developers</h2>
+        <div class="developers">
+            <div class="developer-card">
+                <img src="dhayapic.jpg" alt="Dhaya">
+                <h3>DHAYA</h3>
+                
+                
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/dhayanandhan-gk-3ba2332a6" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/dhaya2810" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://x.com/dhaya_beatzz" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/dhaya.beatzz" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="developer-card">
+                <img src="devz.jpg" alt="devz">
+                <h3>DEVENDRAN</h3>
+                <div class="social-links">
+                    <a href=https://www.linkedin.com/in/devendran-janasankar-540b06324/ target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href=https://github.com/Devendran31 target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://x.com/devz" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href=https://www.instagram.com/devz__here?igsh=MTNhMTl0M21ydHdh target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+                
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Event Finder. All rights reserved.</p>
+    </footer>
+</body>
+</html>
